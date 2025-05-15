@@ -4,55 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nosotros - Bite&Go Mojitos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 20px;
-      background-color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #006d5b;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
     }
 
     nav {
-      text-align: center;
-      margin-bottom: 20px;
+      background-color: #006d5b;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
     }
 
     nav a {
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
-      color: #2e7d32;
+      font-weight: bold;
+      transition: transform 0.3s ease;
     }
 
-    h1 {
-      color: #2e7d32;
-      text-align: center;
+    nav a:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
     }
 
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.6;
-      text-align: center;
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    h2 {
+      color: #006d5b;
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Conócenos</h1>
+  </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="menu.html">Menú</a>
     <a href="info.html">Sobre Nosotros</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
 
-  <h1>Sobre Bite&Go Mojitos</h1>
+  <div class="container">
+    <h2>Nuestra Historia</h2>
+    <p>Bite&Go Mojitos nació de la pasión por los sabores refrescantes y naturales. Comenzamos como un pequeño puesto en mercados locales, y hoy servimos cientos de mojitos sin alcohol cada semana.</p>
 
-  <p>
-    En Bite&Go Mojitos nos dedicamos a brindar experiencias refrescantes a través de nuestros mojitos, helados y bebidas únicas. Nuestro compromiso es ofrecer sabor, frescura y felicidad en cada producto.
-  </p>
+    <h2>Filosofía</h2>
+    <p>Creemos en ofrecer bebidas que no solo sean deliciosas, sino también inclusivas: sin alcohol, pero llenas de sabor. Nos enfocamos en ingredientes frescos, sostenibilidad y creatividad.</p>
 
-  <p>
-    Empezamos con una idea simple: combatir el calor con sabor. Hoy somos una empresa joven, creativa y con muchas ganas de refrescar tus días. ¡Gracias por confiar en nosotros!
-  </p>
+    <h2>Equipo</h2>
+    <p>Somos un equipo joven, apasionado y con ganas de revolucionar las bebidas urbanas. ¡Te esperamos para que vivas la experiencia Bite&Go!</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Bite&Go Mojitos - Todos los derechos reservados</p>
+  </footer>
 
 </body>
 </html>
+
