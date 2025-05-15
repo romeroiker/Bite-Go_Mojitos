@@ -1,69 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bite&Go Mojitos</title>
+  <link href="" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
       background-color: #ffffff;
-      color: #333;
     }
 
     header {
-      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092'); /* Fondo con mojitos */
-      background-size: cover;
-      background-position: center;
+      background: url("https://blog.regalooriginal.com/wp-content/uploads/2017/06/mojitos.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
     }
 
     header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+      font-size: 3em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      font-family: 'Pacifico', cursive;
+      animation: fadeInDown 2s ease-out;
     }
 
-    section {
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      background-color: #006d5b;
       display: flex;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-      align-items: center;
       justify-content: center;
-    }
-
-    .text-block {
-      flex: 1 1 300px;
-      padding: 20px;
-    }
-
-    .image-block {
-      flex: 1 1 300px;
-      padding: 20px;
-    }
-
-    .image-block img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    footer {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      gap: 25px;
+      padding: 15px 0;
     }
 
     nav a {
-      margin: 0 10px;
       color: white;
       text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .flex img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.4s;
+    }
+
+    .flex img:hover {
+      transform: scale(1.03);
+    }
+
+    .flex.reverse {
+      flex-direction: row-reverse;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      color: #333;
+      font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
-      section {
+      .flex {
         flex-direction: column;
       }
     }
@@ -72,39 +120,39 @@
 <body>
 
   <header>
-    <h1>Bite&Go Mojitos</h1>
-    <p>"El sabor que te atrapa, el mojito que te refresca"</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="menu.html">Menú</a>
-      <a href="info.html">Sobre Nosotros</a>
-    </nav>
+    <h1>"El sabor que te atrapa, el mojito que te refresca"</h1>
   </header>
 
-  <section>
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1603052875505-e3f9a44c6f1d" alt="Mojitos" />
-    </div>
-    <div class="text-block">
-      <h2>Mojitos refrescantes</h2>
-      <p>Descubre nuestra gama de mojitos artesanales, elaborados con ingredientes frescos y llenos de sabor.</p>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Menú</a>
+    <a href="#">Sobre Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <section class="flex">
+    <img src="https://sobremesa.es/upload/img/periodico/img_7812.jpg" alt="Mojitos">
+    <div>
+      <h2>Mojitos irresistibles</h2>
+      <p>Descubre el arte del mojito perfecto: fresco, equilibrado y lleno de sabor. Cada vaso está hecho al momento con hierbabuena natural, lima recién cortada y el toque justo de dulzura. Ya sea clásico o con un giro frutal, nuestros mojitos son el acompañante ideal para cualquier momento.</p>
+      <p>Disfrútalos bien fríos, preparados al momento y con una presentación que te hará querer compartirla en tus redes. ¡Ven y prueba el sabor que nos hace únicos!</p>
     </div>
   </section>
 
-  <section>
-    <div class="text-block">
-      <h2>Helados irresistibles</h2>
-      <p>Disfruta de nuestros helados fríos, suaves y perfectos para los días de calor. Sabores únicos que enamoran.</p>
-    </div>
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Helados" />
+  <section class="flex reverse">
+    <img src="https://assets.elgourmet.com/wp-content/uploads/2023/09/shutterstock_2298618195-1024x574.jpg.webp" alt="Helados">
+    <div>
+      <h2>Helados refrescantes</h2>
+      <p> Cuando el calor aprieta, tenemos lo que necesitas. Desde helados cremosos hasta gaseosas bien frías y otras delicias refrescantes, aquí siempre hay algo que te hará decir “¡qué rico!”.</p>
+      <p>Todos nuestros helados están hechos con ingredientes de calidad premium, perfectos para disfrutar en cualquier momento del día.</p>
     </div>
   </section>
 
   <footer>
-    <p>Síguenos en Instagram: @biteandgomojitos</p>
-    <p>&copy; 2025 Bite&Go Mojitos</p>
+    <p>Síguenos en Instagram: <a href="https://instagram.com/tu_instagram" target="_blank">@biteandgomojitos</a></p>
+    <p>&copy; 2025 Bite&Go Mojitos - Todos los derechos reservados</p>
   </footer>
 
 </body>
 </html>
+
