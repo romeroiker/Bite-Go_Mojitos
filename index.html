@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bite&Go Mojitos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092'); /* Fondo con mojitos */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-block {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .image-block {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .image-block img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bite&Go Mojitos</h1>
+    <p>"El sabor que te atrapa, el mojito que te refresca"</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="info.html">Sobre Nosotros</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="image-block">
+      <img src="https://images.unsplash.com/photo-1603052875505-e3f9a44c6f1d" alt="Mojitos" />
+    </div>
+    <div class="text-block">
+      <h2>Mojitos refrescantes</h2>
+      <p>Descubre nuestra gama de mojitos artesanales, elaborados con ingredientes frescos y llenos de sabor.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="text-block">
+      <h2>Helados irresistibles</h2>
+      <p>Disfruta de nuestros helados fríos, suaves y perfectos para los días de calor. Sabores únicos que enamoran.</p>
+    </div>
+    <div class="image-block">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Helados" />
+    </div>
+  </section>
+
+  <footer>
+    <p>Síguenos en Instagram: @biteandgomojitos</p>
+    <p>&copy; 2025 Bite&Go Mojitos</p>
+  </footer>
+
+</body>
+</html>
